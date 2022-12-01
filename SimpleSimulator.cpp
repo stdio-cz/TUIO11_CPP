@@ -392,13 +392,13 @@ int main(int argc, char* argv[])
 	OscSender *tcp_sender = NULL;
 	if( argc == 2 ) {
 		try { tcp_sender = new TcpSender(atoi(argv[1])); }
-		catch (std::exception e) { tcp_sender = NULL; }
+		catch (const std::exception& e) { tcp_sender = NULL; }
 	} else if ( argc == 3 ) {
 		try { tcp_sender = new TcpSender(argv[1],atoi(argv[2])); }
-		catch (std::exception e) { tcp_sender = NULL; }
+		catch (const std::exception& e) { tcp_sender = NULL; }
 	} else {
 		try { tcp_sender = new TcpSender(3333); }
-		catch (std::exception e) { tcp_sender = NULL; }
+		catch (const std::exception& e) { tcp_sender = NULL; }
 	}
 	if (tcp_sender) server->addOscSender(tcp_sender);
 
@@ -406,13 +406,13 @@ int main(int argc, char* argv[])
 	// add an additional TUIO/WEB sender
 	OscSender *web_sender = NULL;
 	try { web_sender = new WebSockSender(8080); }
-	catch (std::exception e) { web_sender = NULL; }
+	catch (const std::exception& e) { web_sender = NULL; }
 	if (web_sender) server->addOscSender(web_sender);
 	
 	// add an additional TUIO/FLC sender
 	OscSender *flash_sender = NULL;
 	try { flash_sender = new FlashSender(); }
-	catch (std::exception e) { flash_sender = NULL; }
+	catch (const std::exception& e) { flash_sender = NULL; }
 	if (flash_sender) server->addOscSender(flash_sender);
 
 	SimpleSimulator *app = new SimpleSimulator(server);

@@ -82,7 +82,7 @@ void TuioDemo::removeTuioBlob(TuioBlob *tblb) {
 }
 
 
-void TuioDemo::refresh(TuioTime frameTime) {
+void TuioDemo::refresh(TuioTime /*frameTime*/) {
 	//drawObjects();
 }
 

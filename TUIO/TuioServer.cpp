@@ -156,8 +156,9 @@ void TuioServer::setSourceName(const char *src) {
 		hp = gethostbyname(hostname);
 		
 		if (hp==NULL) {
-			sprintf(hostname, "%s.local", hostname);
-			hp = gethostbyname(hostname);
+            char hostname2[71];
+			sprintf(hostname2, "%s.local", hostname);
+			hp = gethostbyname(hostname2);
 		}
 		
 		if (hp!=NULL) {

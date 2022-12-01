@@ -74,7 +74,7 @@ void TuioDump::removeTuioBlob(TuioBlob *tblb) {
 	std::cout << "del blb " << tblb->getBlobID() << " (" << tblb->getSessionID() << "/"<<  tblb->getTuioSourceID() << ")" << std::endl;
 }
 
-void  TuioDump::refresh(TuioTime frameTime) {
+void  TuioDump::refresh(TuioTime /*frameTime*/) {
 	//std::cout << "refresh " << frameTime.getTotalMilliseconds() << std::endl;
 }
 
