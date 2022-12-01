@@ -70,7 +70,7 @@ static void* ClientThreadFunc( void* obj )
 	//std::cout << sender->tcp_client_list.size() << " clients left"<< std::endl;	
 
 	return 0;
-};
+}
 
 #ifndef  WIN32
 static void* ServerThreadFunc( void* obj )
@@ -108,7 +108,7 @@ static DWORD WINAPI ServerThreadFunc( LPVOID obj )
 	}
 	
 	return 0;
-};
+}
 
 TcpReceiver::TcpReceiver(int port)
 : tcp_socket	(-1)

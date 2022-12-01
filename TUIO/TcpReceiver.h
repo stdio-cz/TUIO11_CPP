@@ -99,5 +99,5 @@ namespace TUIO {
 		
 		bool locked;
 	};
-};
+}
 #endif /* INCLUDED_TcpReceiver_H */

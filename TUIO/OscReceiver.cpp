@@ -21,7 +21,7 @@
 using namespace TUIO;
 using namespace osc;
 
-void OscReceiver::ProcessMessage( const ReceivedMessage& msg, const IpEndpointName& remoteEndpoint) {
+void OscReceiver::ProcessMessage( const ReceivedMessage& msg, const IpEndpointName& /*remoteEndpoint*/) {
 	for (std::list<TuioClient*>::iterator client=clientList.begin(); client!= clientList.end(); client++)
 		(*client)->processOSC(msg);
 }

@@ -92,7 +92,7 @@ void WebSockSender::newClient( int tcp_client ) {
 
 	// read client handshake challenge
 	while ((buf[0] != 0) && (buf[0] != '\r')) {
-		fgets( buf, sizeof(buf), conn );
+        [[maybe_unused]] const auto ret = fgets( buf, sizeof(buf), conn );
 		if (strncmp(buf,"Sec-WebSocket-Key: ",19) == 0) {
 			strncpy(key,buf+19,sizeof(key));
 			key[strlen(buf)-21] = 0;
@@ -163,7 +163,7 @@ void WebSockSender::sha1( uint8_t digest[SHA1_HASH_SIZE], const uint8_t* inbuf, 
 	 also be some zeroes in between the 0x80 and the bit count so that we
 	 operate on a multiple of 64 bytes; 9 bytes, though, is the minimal
 	 amount of extra data.)	*/
-	for (i = 0; i < length + 9; i += 64) {
+	for (i = 0; i < static_cast<int>(length + 9); i += 64) {
 		
 		/* Perform any padding necessary. */
 		remaining_bytes = (int)length - i;

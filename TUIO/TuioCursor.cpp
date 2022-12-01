@@ -34,5 +34,5 @@ TuioCursor::TuioCursor (TuioCursor *tcur):TuioContainer(tcur) {
 
 int TuioCursor::getCursorID() const{
 	return cursor_id;
-};
+}
 

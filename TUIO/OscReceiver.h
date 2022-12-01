@@ -93,5 +93,5 @@ namespace TUIO {
 		std::list<TuioClient*> clientList;
 		bool connected;
 	};
-};
+}
 #endif /* INCLUDED_OSCRECEIVER_H */

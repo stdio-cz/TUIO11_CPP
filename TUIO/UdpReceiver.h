@@ -73,5 +73,5 @@ namespace TUIO {
 		
 		bool locked;
 	};
-};
+}
 #endif /* INCLUDED_UDPRECEIVER_H */

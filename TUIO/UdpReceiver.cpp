@@ -29,7 +29,7 @@ static DWORD WINAPI ClientThreadFunc( LPVOID obj )
 {
 	static_cast<UdpReceiver*>(obj)->socket->Run();
 	return 0;
-};
+}
 
 UdpReceiver::UdpReceiver(int port):locked (false) {
 	try {

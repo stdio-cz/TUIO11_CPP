@@ -297,5 +297,5 @@ namespace TUIO {
 		OscReceiver *receiver;
 		bool local_receiver;
 	};
-};
+}
 #endif /* INCLUDED_TUIOCLIENT_H */

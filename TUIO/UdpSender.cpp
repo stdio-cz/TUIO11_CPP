@@ -53,7 +53,7 @@ UdpSender::UdpSender(const char *host, int port) {
 	}
 }
 
-UdpSender::UdpSender(const char *host, int port, int size) {
+UdpSender::UdpSender(const char *host, int port, int /*size*/) {
 	try {
 		if ((strcmp(host,"127.0.0.1")==0) || (strcmp(host,"localhost")==0)) {
 			local = true;

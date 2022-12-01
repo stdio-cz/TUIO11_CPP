@@ -61,6 +61,8 @@ namespace TUIO {
 		 */
 		TuioTime ():seconds(0),micro_seconds(0) {};
 
+
+        TuioTime(const TuioTime&) = default;
 		/**
 		 * The destructor is doing nothing in particular. 
 		 */
